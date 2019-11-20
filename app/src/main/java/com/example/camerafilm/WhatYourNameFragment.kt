@@ -20,13 +20,14 @@ class WhatYourNameFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentWhatYourNameBinding>(inflater,
+
             R.layout.fragment_what_your_name,container,false)
 
 
         binding.submitButton.setOnClickListener{view: View ->
             view.findNavController().navigate(WhatYourNameFragmentDirections.actionWhatYourNameFragmentToMenu(binding.viewerNameText.text.toString()))
         }
-
+        Toast.makeText(context, "Hello", Toast.LENGTH_LONG).show()
         setHasOptionsMenu(true)
         return binding.root
     }
