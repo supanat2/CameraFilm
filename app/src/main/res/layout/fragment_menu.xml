@@ -52,6 +52,7 @@
 
         <TextView
             android:id="@+id/nameText"
+            android:text="@={name.name}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="180dp"

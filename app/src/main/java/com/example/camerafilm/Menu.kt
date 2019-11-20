@@ -16,20 +16,20 @@ import com.example.camerafilm.databinding.FragmentMenuBinding
  * A simple [Fragment] subclass.
  */
 class Menu : Fragment() {
-//    private lateinit var name: Name
+    private lateinit var name: Name
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        name.name = "test"
         val binding = DataBindingUtil.inflate<FragmentMenuBinding>(inflater,
             R.layout.fragment_menu,container,false)
 
         val args = MenuArgs.fromBundle(arguments!!)
 //        name.name = args.viewerName
         Log.i("safe",args.viewerName)
+        name = Name(args.viewerName)
 //        Log.i("safe", name.name + "in")
-    binding.nameText.setText(args.viewerName)
+//    binding.nameText.setText(args.viewerName)
 
 
     binding.cameraButton.setOnClickListener{ view : View ->
@@ -43,7 +43,7 @@ class Menu : Fragment() {
     }
 
 
-//        binding.name = name
+        binding.name = name
         binding.invalidateAll()
         return binding.root
     }
