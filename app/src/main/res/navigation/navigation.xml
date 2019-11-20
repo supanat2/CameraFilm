@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/whatYourNameFragment">
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.camerafilm.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_cameraListFragment"
+            app:destination="@id/cameraListFragment" />
+        <action
+            android:id="@+id/action_menu_to_filmFragment"
+            app:destination="@id/filmFragment" />
+        <argument
+            android:name="viewerName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraListFragment"
+        android:name="com.example.camerafilm.CameraListFragment"
+        android:label="fragment_camera_list"
+        tools:layout="@layout/fragment_camera_list" />
+    <fragment
+        android:id="@+id/whatYourNameFragment"
+        android:name="com.example.camerafilm.WhatYourNameFragment"
+        android:label="fragment_what_your_name"
+        tools:layout="@layout/fragment_what_your_name" >
+        <action
+            android:id="@+id/action_whatYourNameFragment_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmFragment"
+        android:name="com.example.camerafilm.FilmFragment"
+        android:label="fragment_film"
+        tools:layout="@layout/fragment_film" />
+</navigation>

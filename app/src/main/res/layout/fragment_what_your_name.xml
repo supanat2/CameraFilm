@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".WhatYourNameFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/viewerNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintEnd_toEndOf="@+id/whatYourName"
+            app:layout_constraintStart_toStartOf="@+id/whatYourName"
+            app:layout_constraintTop_toBottomOf="@+id/whatYourName" />
+
+        <TextView
+            android:id="@+id/whatYourName"
+            android:layout_width="122dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="240dp"
+            android:text="@string/what_your_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="submit"
+            app:layout_constraintEnd_toEndOf="@+id/viewerNameText"
+            app:layout_constraintStart_toStartOf="@+id/viewerNameText"
+            app:layout_constraintTop_toBottomOf="@+id/viewerNameText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
