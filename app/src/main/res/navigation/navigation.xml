@@ -39,4 +39,9 @@
         android:name="com.example.camerafilm.FilmFragment"
         android:label="fragment_film"
         tools:layout="@layout/fragment_film" />
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.camerafilm.about"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

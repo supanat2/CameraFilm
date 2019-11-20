@@ -5,10 +5,10 @@
     tools:context=".WhatYourNameFragment">
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/yello">
 
         <EditText
             android:id="@+id/viewerNameText"
@@ -18,16 +18,18 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/whatYourName"
             app:layout_constraintStart_toStartOf="@+id/whatYourName"
             app:layout_constraintTop_toBottomOf="@+id/whatYourName" />
 
         <TextView
             android:id="@+id/whatYourName"
-            android:layout_width="122dp"
-            android:layout_height="38dp"
+            android:layout_width="185dp"
+            android:layout_height="28dp"
             android:layout_marginTop="240dp"
             android:text="@string/what_your_name"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -8,5 +8,7 @@
     <string name="film">Film</string>
     <string name="what_do_you_want_to_see">What do you want to see?</string>
     <string name="camera">Camera</string>
+    <string name="about">about</string>
+    <string name="textAbout">บอกลักษณะของกล้องฟิล์มและฟิล์มชนิดต่างๆ</string>
 
 </resources>

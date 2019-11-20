@@ -2,13 +2,12 @@ package com.example.camerafilm
 
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.camerafilm.databinding.FragmentWhatYourNameBinding
 import java.util.jar.Attributes
 
@@ -28,9 +27,18 @@ class WhatYourNameFragment : Fragment() {
             view.findNavController().navigate(WhatYourNameFragmentDirections.actionWhatYourNameFragmentToMenu(binding.viewerNameText.text.toString()))
         }
 
-
+        setHasOptionsMenu(true)
         return binding.root
     }
 
+    override fun onCreateOptionsMenu(menu: android.view.Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.options_menu, menu)
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item!!,
+            view!!.findNavController())
+                || super.onOptionsItemSelected(item)
+    }
 }
