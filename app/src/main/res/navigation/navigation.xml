@@ -24,7 +24,11 @@
         android:id="@+id/cameraListFragment"
         android:name="com.example.camerafilm.CameraListFragment"
         android:label="fragment_camera_list"
-        tools:layout="@layout/fragment_camera_list" />
+        tools:layout="@layout/fragment_camera_list" >
+        <action
+            android:id="@+id/action_cameraListFragment_to_srt101"
+            app:destination="@id/srt101" />
+    </fragment>
     <fragment
         android:id="@+id/whatYourNameFragment"
         android:name="com.example.camerafilm.WhatYourNameFragment"
@@ -44,4 +48,9 @@
         android:name="com.example.camerafilm.about"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/srt101"
+        android:name="com.example.camerafilm.srt101"
+        android:label="fragment_srt101"
+        tools:layout="@layout/fragment_srt101" />
 </navigation>

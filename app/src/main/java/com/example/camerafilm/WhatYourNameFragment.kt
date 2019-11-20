@@ -27,7 +27,7 @@ class WhatYourNameFragment : Fragment() {
         binding.submitButton.setOnClickListener{view: View ->
             view.findNavController().navigate(WhatYourNameFragmentDirections.actionWhatYourNameFragmentToMenu(binding.viewerNameText.text.toString()))
         }
-        Toast.makeText(context, "Hello", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "Hello welcome to Film", Toast.LENGTH_LONG).show()
         setHasOptionsMenu(true)
         return binding.root
     }
