@@ -26,8 +26,11 @@ class CameraListFragment : Fragment() {
 
         binding.textSrt101.setOnClickListener{ view : View ->
             view.findNavController().navigate(R.id.action_cameraListFragment_to_srt101)
-
         }
+        binding.imgSrt101.setOnClickListener{ view : View ->
+            view.findNavController().navigate(R.id.action_cameraListFragment_to_srt101)
+        }
+
         // Inflate the layout for this fragment
 
   //      return inflater.inflate(R.layout.fragment_camera_list, container, false)
